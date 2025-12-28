@@ -13,10 +13,23 @@ const messages = [
     }
 ];
 
+const links = [
+  { href: "/", text: "Home" },
+  { href: "new", text: "New Message" },
+];
+
 const indexRouter = Router();
 
+
 indexRouter.get("/", (req, res) => {
-    res.render("index", { messages: messages });
+    res.render("index", { messages: messages, links: links });
+});
+
+indexRouter.post("/new", (req, res) => {
+    const { messageText, messageUser } = req.body;
+    messages.push({ text: messageText, user: messageUser, added: new Date() });
+
+    res.redirect("/");
 });
 
 module.exports = indexRouter;

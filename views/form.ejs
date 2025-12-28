@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <h1>Add a new message?</h1>
+        <% for (let i = 0; i < links.length; i++) { %>
+            <li>
+                <a href="<%= links[i].href %>">
+                <span> <%= links[i].text %> </span>
+                </a>
+            </li>
+        <% } %>
+        <br>
+        <form method="POST" action="/new">
+            <label for="messageUser">Author Name:</label><br>
+            <input type="text" id="messageUser" name="messageUser"><br>
+
+            <label for="messageText">Message:</label><br>
+            <input type="text" id="messageText" name="messageText"><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>

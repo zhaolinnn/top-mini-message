@@ -2,6 +2,13 @@
 <html>
     <body>
         <div>Mini Message Board</div>
+        <% for (let i = 0; i < links.length; i++) { %>
+            <li>
+                <a href="<%= links[i].href %>">
+                <span> <%= links[i].text %> </span>
+                </a>
+            </li>
+        <% } %>
         <ul>
             <% for (let i = 0; i < messages.length; i++) { %>
                 <li>
