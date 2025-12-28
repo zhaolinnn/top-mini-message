@@ -1,0 +1,23 @@
+<!-- pass messages from indexRouter.js -->
+<html>
+    <body>
+        <div>Mini Message Board</div>
+        <ul>
+            <% for (let i = 0; i < messages.length; i++) { %>
+                <li>
+                    <div>
+                        User: <%= messages[i].user %>  
+                    </div>
+                    <div> 
+                        Text: <%= messages[i].text %> 
+                    </div>
+                    <div>
+                        Added: <%= messages[i].added %>
+                    </div>
+                    </a>
+                </li>
+            <% } %>
+        </ul>
+    </body>
+
+</html>
