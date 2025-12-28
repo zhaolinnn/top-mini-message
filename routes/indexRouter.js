@@ -15,7 +15,7 @@ const messages = [
 
 const links = [
   { href: "/", text: "Home" },
-  { href: "new", text: "New Message" },
+//   { href: "new", text: "New Message" },
 ];
 
 const indexRouter = Router();
@@ -23,6 +23,14 @@ const indexRouter = Router();
 
 indexRouter.get("/", (req, res) => {
     res.render("index", { messages: messages, links: links });
+});
+
+// we use a GET here to see when the user is at a /messages/:messageId link
+// then renders details page with that message (details)
+indexRouter.get("/messages/:messageId", (req, res) => {
+    const { messageId } = req.params;
+    const details = messages[messageId];
+    res.render("details", { details: details })
 });
 
 indexRouter.post("/new", (req, res) => {

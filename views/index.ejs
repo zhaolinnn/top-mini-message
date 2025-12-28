@@ -9,6 +9,9 @@
                 </a>
             </li>
         <% } %>
+        <a href="/new">
+            <button>Add New Message</button>
+        </a>
         <ul>
             <% for (let i = 0; i < messages.length; i++) { %>
                 <li>
@@ -21,10 +24,17 @@
                     <div>
                         Added: <%= messages[i].added %>
                     </div>
+                    <!-- making button send to /message/:messageId url, this messageId is passed -->
+                     <!-- as parameter in indexRouter -->
+                    <a href="/messages/<%= i %>">
+                         <button id="details">Open details</button>
                     </a>
+
                 </li>
             <% } %>
         </ul>
+        
+        
     </body>
 
 </html>
