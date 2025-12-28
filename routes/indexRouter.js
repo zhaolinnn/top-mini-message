@@ -13,16 +13,16 @@ const messages = [
     }
 ];
 
-const links = [
-  { href: "/", text: "Home" },
+// const links = [
+//   { href: "/", text: "Home" },
 //   { href: "new", text: "New Message" },
-];
+// ];
 
 const indexRouter = Router();
 
 
 indexRouter.get("/", (req, res) => {
-    res.render("index", { messages: messages, links: links });
+    res.render("index", { messages: messages });
 });
 
 // we use a GET here to see when the user is at a /messages/:messageId link
