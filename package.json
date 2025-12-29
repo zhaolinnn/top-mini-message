@@ -16,6 +16,9 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "test": "npm test"
+    "test": "echo \"no tests\""
+  },
+  "dependencies": {
+    "express": "^4.19.2"
   }
 }
