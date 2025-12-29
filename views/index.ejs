@@ -1,35 +1,42 @@
 <!-- pass messages from indexRouter.js -->
 <html>
+    <head>
+        <link rel="stylesheet" href="/styles.css">
+    </head>
     <body>
-        <div>Mini Message Board</div>
 
-        <a href="/">
-            <button>Home</button>
-        </a>
-        <a href="/new">
-            <button>Add New Message</button>
-        </a>
-        <ul>
-            <% for (let i = 0; i < messages.length; i++) { %>
-                <li>
-                    <div>
-                        User: <%= messages[i].user %>  
-                    </div>
-                    <div> 
-                        Text: <%= messages[i].text %> 
-                    </div>
-                    <div>
-                        Added: <%= messages[i].added %>
-                    </div>
-                    <!-- making button send to /message/:messageId url, this messageId is passed -->
-                     <!-- as parameter in indexRouter -->
-                    <a href="/messages/<%= i %>">
-                         <button id="details">Open details</button>
-                    </a>
+        <div class="board">
+            <div class="title"><h1>Mini Message Board</h1></div>
 
-                </li>
-            <% } %>
-        </ul>
+            <div class="navbar">
+                <a href="/" class="btn">Home</a>
+                <a href="/new" class="btn">Add New Message</a>
+            </div>
+            
+            <ul class="messageList">
+                <% for (let i = 0; i < messages.length; i++) { %>
+                    <li class="textItem">
+                        <div class="messageText">
+                            User: <%= messages[i].user %>  
+                        </div>
+                        <div class="messageText"> 
+                            Text: <%= messages[i].text %> 
+                        </div>
+                        <div class="timeText">
+                            Added: <%= messages[i].added %>
+                        </div>
+                        <!-- making button send to /message/:messageId url, this messageId is passed -->
+                        <!-- as parameter in indexRouter -->
+                        <a href="/messages/<%= i %>" class="detailsBtn">
+                            <button id="details">Open details</button>
+                        </a>
+
+                    </li>
+                <% } %>
+            </ul>
+
+        </div>
+        
         
         
     </body>
