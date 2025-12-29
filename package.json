@@ -1,0 +1,20 @@
+{
+  "name": "top-mini-message",
+  "version": "1.0.0",
+  "description": "A small message board system that allows users to write and read messages, as well as open message details.",
+  "homepage": "https://github.com/zhaolinnn/top-mini-message#readme",
+  "bugs": {
+    "url": "https://github.com/zhaolinnn/top-mini-message/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhaolinnn/top-mini-message.git"
+  },
+  "license": "ISC",
+  "author": "Alan Liu",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm test"
+  }
+}
