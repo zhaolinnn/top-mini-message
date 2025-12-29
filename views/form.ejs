@@ -1,18 +1,30 @@
 <html>
+    <head>
+        <link rel="stylesheet" href="/styles.css">
+    </head>
     <body>
-        <h1>Add a new message?</h1>
-        <a href="/">
-            <button>Home</button>
-        </a>
-        <br>
-        <form method="POST" action="/new">
-            <label for="messageUser">Author Name:</label><br>
-            <input type="text" id="messageUser" name="messageUser"><br>
 
-            <label for="messageText">Message:</label><br>
-            <input type="text" id="messageText" name="messageText"><br>
+        <div class="board">
+            <h1 class="title">Add a new message?</h1>
+            <a href="/" class="btn">Home</a>
+            <br>
+            <form method="POST" action="/new">
 
-            <input type="submit" value="Submit">
-        </form>
+                <div class="form">
+                    <label for="messageUser" class="messageText">Author Name:</label><br>
+                    <input type="text" id="messageUser" name="messageUser"><br>
+
+                    <label for="messageText" class="messageText">Message:</label><br>
+                    <input type="text" id="messageText" name="messageText"><br>
+
+                    <div class="submitBtn">
+                        <input type="submit" value="Submit" class="detailsBtn">
+                    </div>
+                    
+                </div>
+                
+            </form>
+        </div>
+        
     </body>
 </html>
